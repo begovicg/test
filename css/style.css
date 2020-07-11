@@ -62,13 +62,22 @@
 }
 
 .register .register-form {
-    padding: 10%;
+    padding: 10% 10% 0 10%;
     margin-top: 10%;
+}
+
+.register .register-static {
+    padding-left: 10%;
+}
+
+.register .register-static>div {
+    padding-left: 0;
 }
 
 .btnRegister {
     float: left;
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     border: none;
     border-radius: 1.5rem;
     padding: 2%;
@@ -84,7 +93,7 @@
     border: none;
     background: #eb923d;
     border-radius: 1.5rem;
-    width: 28%;
+    width: 24%;
     float: right;
 }
 
@@ -102,7 +111,7 @@
 }
 
 .register .nav-tabs .nav-link.active {
-    width: 100px;
+    width: 100%;
     color: #eb923d;
     border: 2px solid #eb923d;
     border-top-left-radius: 1.5rem;

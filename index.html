@@ -61,65 +61,54 @@
                         <a class="nav-link" id="mobile_reg-tab" data-toggle="tab" href="#mobile_reg" role="tab" aria-controls="mobile_reg" aria-selected="false">Mobile</a>
                     </li>
                 </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="email_reg" role="tabpanel" aria-labelledby="email_reg-tab">
-                        <h3 class="register-heading">Register with email</h3>
-                        <form id="email_form" action="/">
+                <form id="form" action="/" method="POST">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="email_reg" role="tabpanel" aria-labelledby="email_reg-tab">
+                            <h3 class="register-heading">Register with email</h3>
                             <div class="row register-form">
 
                                 <div class="col-md-10 offset-md-2">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Your Email *" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        Payment method: &nbsp;
-                                        <label>
-                                        <input type="radio" name="prop_crnt" class="currency" value="0" id="crnt-thb" required>&nbsp;EUR</label>
-                                        <label>
-                                        <input type="radio" name="prop_crnt" class="currency" value="1" id="crnt-usd">&nbsp;USD</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions and Privacy Policy
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="checkbox" name="checkbox" value="check" id="notifications" /> I agree to receive notifications from Citrus Systems
+                                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email *" value="" />
                                     </div>
 
-
-                                    <input type="submit" name="email_submit" class="btnRegister" value="Register" />
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="tab-pane fade show" id="mobile_reg" role="tabpanel" aria-labelledby="mobile_reg-tab">
-                        <h3 class="register-heading">Register with mobile</h3>
-                        <form id="mobile_form" action="/">
+                        </div>
+                        <div class="tab-pane fade show" id="mobile_reg" role="tabpanel" aria-labelledby="mobile_reg-tab">
+                            <h3 class="register-heading">Register with mobile</h3>
                             <div class="row register-form">
 
                                 <div class="col-md-10 offset-md-2">
                                     <div class="form-group">
-                                        <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
-                                    </div>
-                                    <div class="form-group">
-                                        Payment method: &nbsp;
-                                        <label>
-                                        <input type="radio" name="prop_crnt" class="currency" value="0" id="crnt-thb" required>&nbsp;EUR</label>
-                                        <label>
-                                        <input type="radio" name="prop_crnt" class="currency" value="1" id="crnt-usd">&nbsp;USD</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions and Privacy Policy
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="checkbox" name="checkbox" value="check" id="notifications" /> I agree to receive notifications from Citrus Systems
+                                        <input type="text" minlength="10" maxlength="10" name="mobile" id="mobile" class="form-control" placeholder="Your Phone *" value="" />
                                     </div>
 
-                                    <input type="submit" name="mobile_submit" class="btnRegister" value="Register" />
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                    <div class="row register-static">
+                        <div class="col-md-10 offset-md-2">
+                            <div class="form-group" id="currency">
+                                Payment method: &nbsp;
+                                <label>
+                            <input type="radio" name="currency" class="currency" value="0" id="crnt-eur" required checked="checked">&nbsp;EUR</label>
+                                <label>
+                            <input type="radio" name="currency" class="currency" value="1" id="crnt-usd" required>&nbsp;USD</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="terms" id="terms" id="agree" required/> I have read and agree to the Terms and Conditions and Privacy Policy
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="notifications" id="notifications" id="notifications" /> I agree to receive notifications from Citrus Systems
+                            </div>
+
+                            <input type="submit" name="submit" class="btnRegister" value="Register" />
+                        </div>
+                    </div>
+                </form>
+
             </div>
         </div>
 
