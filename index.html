@@ -81,7 +81,7 @@
 
                                 <div class="col-md-10 offset-md-2">
                                     <div class="form-group">
-                                        <input type="text" minlength="10" maxlength="10" name="mobile" id="mobile" class="form-control" placeholder="Your Phone *" value="" />
+                                        <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Your Phone *" value="" />
                                     </div>
 
                                 </div>
@@ -97,11 +97,14 @@
                                 <label>
                             <input type="radio" name="currency" class="currency" value="1" id="crnt-usd" required>&nbsp;USD</label>
                             </div>
-                            <div class="form-group">
-                                <input type="checkbox" name="terms" id="terms" id="agree" required/> I have read and agree to the Terms and Conditions and Privacy Policy
+                            <div class="form-group custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" name="terms" id="terms" required>
+                                <label for="terms" class="custom-control-label">I have read and agree to the Terms and Conditions and Privacy Policy</label>
                             </div>
-                            <div class="form-group">
-                                <input type="checkbox" name="notifications" id="notifications" id="notifications" /> I agree to receive notifications from Citrus Systems
+                            <div class="form-group custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" name="notifications" id="notifications">
+                                <label for="notifications" class="custom-control-label">I agree to receive notifications from Citrus Systems
+                                </label>
                             </div>
 
                             <input type="submit" name="submit" class="btnRegister" value="Register" />

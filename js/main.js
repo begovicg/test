@@ -14,14 +14,30 @@ form.addEventListener('submit', (e) => {
 
     e.preventDefault();
 
-    console.log("email_reg_tab: ", email_reg_tab.getAttribute('aria-selected'));
-    console.log("mobile_reg_tab: ", mobile_reg_tab.getAttribute('aria-selected'));
+    // Additional email and phone validation
+    let validationPassed = false;
 
-    console.log("email value: ", email.value);
-    console.log("mobile value: ", mobile.value);
-    console.log("currency value: ", currency.value);
-    console.log("terms checked: ", terms.checked);
-    console.log("notifications checked: ", notifications.checked);
+    if (email_reg_tab.getAttribute('aria-selected')) validationPassed = this.validateEmail(email.value)
+    else validationPassed = this.validatePhone(email.value)
+
+
+
 
 
 })
+
+function validateEmail(mail) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+        return (true)
+    }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
+
+function validatePhone(phone) {
+    if (/^\d{10}$/.test(phone)) {
+        return (true)
+    }
+    alert("You have entered an invalid mobile number!")
+    return (false)
+}

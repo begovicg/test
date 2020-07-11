@@ -125,6 +125,16 @@
     color: #495057;
 }
 
+
+/* Overriding default custom checkbox style*/
+
+.register .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #eb923d !important;
+}
+
+
+/* Overriding default radio button style*/
+
 .register input[type='radio']:after {
     width: 15px;
     height: 15px;
