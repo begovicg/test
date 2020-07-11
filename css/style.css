@@ -162,3 +162,10 @@
     visibility: visible;
     border: 2px solid white;
 }
+
+
+/*Overriding sweetalert button style*/
+
+.swal2-styled.swal2-confirm {
+    background-color: #eb923d !important;
+}
