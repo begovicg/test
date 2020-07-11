@@ -1,6 +1,6 @@
 .register {
     background: -webkit-linear-gradient(left, #2b7353, #ede530);
-    margin-top: 3%;
+    margin-top: 5%;
     padding: 3%;
 }
 
@@ -132,6 +132,10 @@
     background-color: #eb923d !important;
 }
 
+.register .custom-control-label {
+    user-select: none;
+}
+
 
 /* Overriding default radio button style*/
 
@@ -186,12 +190,6 @@
     text-align: center;
     padding-top: 25%;
     opacity: .80;
-}
-
-button {
-    margin: 40px;
-    padding: 5px 20px;
-    cursor: pointer;
 }
 
 .spinner {

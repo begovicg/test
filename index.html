@@ -13,8 +13,9 @@
     <meta property="og:image" content="">
 
     <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -29,22 +30,6 @@
 
 <body>
 
-    <!-- BOOTSTRAP 4 STYLE -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="img/logo.svg" alt="Citrus systems" style="height: 60px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                <!-- Placeholder for potential options in navbar -->
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Target UI -->
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
@@ -103,7 +88,7 @@
                             </div>
                             <div class="form-group custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" name="notifications" id="notifications">
-                                <label for="notifications" class="custom-control-label">I agree to receive notifications from Citrus Systems
+                                <label for="notifications" class="custom-control-label">I agree to receive promo notifications from Citrus Systems
                                 </label>
                             </div>
 
@@ -111,16 +96,17 @@
                         </div>
                     </div>
                 </form>
-
             </div>
+        </div>
+
+        <div id="overlay" style="display:none;">
+            <div class="spinner"></div>
+            <br/> Registering your account...
         </div>
 
     </div>
 
-    <div id="overlay" style="display:none;">
-        <div class="spinner"></div>
-        <br/> Registering your account...
-    </div>
+
 
 
 

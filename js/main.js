@@ -15,20 +15,17 @@ form.addEventListener('submit', (e) => {
     // Additional email and phone validation
     let validationPassed = false;
 
-    if ((emailTabActive == "true" && mobileTabActive == "false")) {
+    if ((emailTabActive == 'true' && mobileTabActive == 'false')) {
         validationPassed = this.validateEmail(email.value)
     } else {
         validationPassed = this.validatePhone(mobile.value)
     }
 
     if (validationPassed) {
-        // TODO: set interval for loading spinner, after that alert user that his account had been successfully registered
         // $('#overlay').fadeIn().delay(2000).fadeOut(); // jQuery solution
         let overlay = document.getElementById('overlay')
         this.fade('in', 500, overlay);
-        //this.fade('out', 5000, overlay);
         window.setTimeout(registration_finished, 3000);
-
 
         function registration_finished() {
             this.fade('out', 500, overlay);
@@ -64,15 +61,7 @@ function validatePhone(phone) {
     }
     Swal.fire({
         title: 'Error!',
-        html: 'You have entered an invalid mobile number! <br>' +
-            'Supported mobile phone formats are: <br>' +
-            '(123) 456-7890 <br>' +
-            '(123)456-7890 <br>' +
-            '123-456-7890 <br>' +
-            '123.456.7890 <br>' +
-            '1234567890 <br>' +
-            '+38112345678 <br>' +
-            '062-1636188',
+        html: 'You have entered an invalid mobile number! <br>Supported mobile phone formats are: <br>(123) 456-7890 <br>(123)456-7890 <br>123-456-7890 <br>123.456.7890 <br>1234567890 <br>+38112345678 <br>062-1636188',
         icon: 'error',
         confirmButtonText: 'Close'
     })
